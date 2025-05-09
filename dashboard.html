@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5dc;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin: 10px;
+            border: 2px solid black;
+        }
+
+        header h1 {
+            font-size: 4vw;
+        }
+
+        header p {
+            font-size: 2vw;
+            margin-top: 10px;
+        }
+
+        nav {
+            background: #000;
+            position: fixed;
+            top: 0;
+            z-index: 10;
+            padding: 8px 0;
+            margin: 10px;
+            border-radius: 8px 8px 0 0;
+            border: 2px solid black;
+            width: 250px;
+            height: 100%;
+            left: 0; /* Ensure sidebar is visible by default */
+            transition: left 0.3s ease;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            padding: 15px;
+            border-bottom: 1px solid #343a40;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2vw;
+            display: block;
+            padding: 5px 0;
+        }
+
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            border: 2px solid black;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+        }
+
+        .stat-box {
+            flex: 1;
+            background: #007bff;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px solid #0056b3;
+        }
+
+        footer {
+            background: #343a40;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+            font-size: 0.9em;
+            margin: 10px;
+            border: 2px solid black;
+        }
+
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            nav {
+                width: 200px; /* Smaller sidebar width on mobile */
+                left: -200px; /* Initially hidden */
+                position: fixed;
+                transition: left 0.3s ease;
+            }
+
+            nav.open {
+                left: 0; /* Show sidebar when 'open' class is added */
+            }
+
+            .content {
+                margin-left: 0;
+                padding: 10px;
+            }
+
+            .hamburger {
+                display: block;
+                background: #2575fc;
+                color: white;
+                padding: 10px;
+                font-size: 2.5em;
+                cursor: pointer;
+                position: fixed;
+                top: 20px;
+                left: 20px;
+                z-index: 11;
+            }
+
+            .stat-box {
+                padding: 15px;
+            }
+
+            footer {
+                font-size: 4vw;
+                margin-bottom: 0;
+            }
+
+            header h1 {
+                font-size: 6vw;
+            }
+
+            header p {
+                font-size: 3vw;
+            }
+
+            nav ul li a {
+                font-size: 4vw;
+            }
+        }
+
+        /* Very small screen styles */
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 8vw;
+            }
+
+            header p {
+                font-size: 4vw;
+            }
+
+            footer {
+                font-size: 5vw;
+                margin-bottom: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dashboard</h1>
+        <p>Manage your blog data and settings</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">User Settings</a></li>
+            <li><a href="#">Analytics</a></li>
+            <li><a href="#">Manage Blogs</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hamburger Icon -->
+    <div class="hamburger">&#9776;</div>
+
+    <div class="content">
+        <div class="stats">
+            <div class="stat-box">Total Blogs: 12</div>
+            <div class="stat-box">Total Views: 13,523</div>
+            <div class="stat-box">Registered Users: 1423</div>
+        </div>
+
+        <div class="card">
+            <h2>Recent Blog Posts</h2>
+            <ul>
+                <li>C# Coding Basics</li>
+                <li>The Evolution of AI</li>
+                <li>Web Design Trends 2025</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="https://create.roblox.com/docs/scripting" target="_blank">Roblox Scripting Docs</a></li>
+                <li><a href="https://www.w3schools.com/cs/index.php" target="_blank">C# Tutorial</a></li>
+                <li><a href="https://www.coursera.org/articles/history-of-ai" target="_blank">History of AI</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 MSI's Blog. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript to toggle the sidebar
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('nav');
+
+        hamburger.addEventListener('click', () => {
+            nav.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>

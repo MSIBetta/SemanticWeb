@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog Listings</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin: 10px;
+      border: 2px solid black;
+    }
+
+    header h1 {
+      font-size: 4vw;
+    }
+
+    header p {
+      font-size: 2vw;
+      margin-top: 10px;
+    }
+
+    nav {
+      background: #000;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      padding: 10px 0;
+      margin: 10px;
+      border-radius: 8px;
+      border: 2px solid black;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 1.2vw;
+    }
+	
+	.nav-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+
+    main {
+      padding: 10px;
+      margin: 10px;
+      border: 2px solid black;
+    }
+
+    section {
+      background: white;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 2px solid black;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #6a11cb;
+      font-size: 1.6em;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 100%;
+      aspect-ratio: 16/9;
+      display: block;
+      margin: 10px 0;
+      border: 2px solid black;
+    }
+
+    footer {
+      background: #343a40;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 1.2vw;
+      margin: 10px;
+      border: 2px solid black;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 6vw;
+      }
+
+      header p {
+        font-size: 3vw;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 5px 10px;
+        font-size: 4vw;
+      }
+
+      footer {
+        font-size: 4vw;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 8vw;
+      }
+
+      header p {
+        font-size: 4vw;
+      }
+
+      nav a {
+        font-size: 5vw;
+        display: block;
+        margin: 10px 0;
+      }
+
+      main {
+        padding: 5px;
+      }
+
+      footer {
+        font-size: 5vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Blog Listings</h1>
+    <p>Explore coding tutorials, videos, and resources.</p>
+  </header>
+
+  <nav>
+   <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="blogs.html">Blogs</a>
+	<a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <section>
+      <h2>C# Coding Basics</h2>
+      <p>Learn the fundamentals of C# programming language.</p>
+      <iframe src="https://www.youtube.com/embed/gfkTfcpWqAY" allowfullscreen></iframe>
+      <a href="https://www.w3schools.com/cs/index.php" target="_blank">Read more</a>
+    </section>
+
+    <section>
+      <h2>The Evolution of AI</h2>
+      <p>Understanding how AI has evolved over the years.</p>
+      <iframe src="https://www.youtube.com/embed/ng43Ou2Yna4" allowfullscreen></iframe>
+      <a href="https://www.coursera.org/articles/history-of-ai" target="_blank">Read more</a>
+    </section>
+
+    <section>
+      <h2>Lua Scripting</h2>
+      <p>Learn the fundamentals of Lua to create engaging games mainly in Roblox Studio.</p>
+      <iframe src="https://www.youtube.com/embed/iMacxZQMPXs" allowfullscreen></iframe>
+      <a href="https://create.roblox.com/docs/scripting" target="_blank">Read more</a>
+    </section>
+
+    <section>
+      <h2>Introduction to IT Concepts</h2>
+      <p>Basic IT knowledge that every tech enthusiast should know.</p>
+      <iframe src="https://www.youtube.com/embed/QvyTEx1wyOY" allowfullscreen></iframe>
+      <a href="https://www.ibm.com/cloud/learn/what-is-information-technology" target="_blank">Read more</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MSI's Blog. All rights reserved.</p>
+  </footer>
+</body>
+</html>
