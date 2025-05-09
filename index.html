@@ -4,6 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MSI's Webpage</title>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      alert("Welcome to my website!");
+    });
+  </script>
   <style>
     * {
       box-sizing: border-box;
@@ -121,26 +126,26 @@
       margin-top: 10px;
     }
 
-.featured-section {
-  position: relative;
-  margin-bottom: 20px; /* Reduced margin */
-  padding: 15px; /* Reduced padding */
-}
+    .featured-section {
+      position: relative;
+      margin-bottom: 20px;
+      padding: 15px;
+    }
 
-.featured-label {
-  position: absolute;
-  top: -15px; /* Adjusted position */
-  right: 5px; /* Adjusted position */
-  font-size: 1em; /* Reduced font size */
-  font-weight: bold;
-  color: #d4af37;
-  background-color: #fff;
-  padding: 5px 10px; /* Reduced padding */
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transform: rotate(5deg);
-  z-index: 1;
-}
+    .featured-label {
+      position: absolute;
+      top: -15px;
+      right: 5px;
+      font-size: 1em;
+      font-weight: bold;
+      color: #d4af37;
+      background-color: #fff;
+      padding: 5px 10px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transform: rotate(5deg);
+      z-index: 1;
+    }
 
     footer {
       background: #343a40;
@@ -172,23 +177,23 @@
 
     /* Link states for "Useful Links" */
     aside ul li a:link {
-      color: #0000EE; /* Unvisited link color (blue) */
+      color: #0000EE;
       text-decoration: none;
     }
 
     aside ul li a:visited {
-      color: #551A8B; /* Visited link color (purple) */
+      color: #551A8B;
       text-decoration: none;
     }
 
     aside ul li a:active {
-      color: red; /* Active link color */
+      color: red;
       text-decoration: none;
     }
 
     aside ul li a:hover {
-      color: #FF4500; /* Hover color (orange) */
-      text-decoration: underline; /* Underline on hover */
+      color: #FF4500;
+      text-decoration: underline;
     }
 
     @media (max-width: 768px) {
